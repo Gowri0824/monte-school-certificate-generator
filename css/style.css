@@ -1011,3 +1011,57 @@ ul {
 .no-print {
   /* hidden when printing: see shared/print.css */
 }
+
+/* ================================================================
+   MOBILE FIX — form screen (phones / small tablets)
+   Put at the very END of css/style.css
+================================================================ */
+@media (max-width: 680px) {
+
+  /* top bar: allow breadcrumb to wrap, smaller side padding */
+  .topbar {
+    padding: 10px 14px;
+  }
+
+  .form-wrap {
+    padding: 16px 12px 40px;
+  }
+
+  .form-card-hdr,
+  .form-card-hdr.indus-hdr {
+    display: block;
+    padding: 16px 16px 14px;
+  }
+
+  /* ONE column instead of two */
+  .form-fields {
+    grid-template-columns: 1fr;
+    padding: 16px;
+    gap: 14px;
+  }
+
+  .fg {
+    min-width: 0;
+  }
+
+  /* 16px stops iPhones zooming in when a field is tapped */
+  .fg input,
+  .fg select,
+  .fg textarea {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    font-size: 16px;
+    padding: 11px 12px;
+  }
+
+  /* buttons: full width, stacked */
+  .form-actions {
+    flex-direction: column-reverse;
+    padding: 14px 16px;
+  }
+
+  .form-actions button {
+    width: 100%;
+  }
+}

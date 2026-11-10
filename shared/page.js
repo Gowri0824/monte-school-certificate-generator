@@ -32,3 +32,38 @@
   var note = document.getElementById('ct-sample');
   if (note && usingSample) note.textContent = ' · sample data';
 })();
+
+/* ================================================================
+   FIT TO SCREEN (phones / small screens) — screen only, printing is NOT affected.
+   Shrinks the A4 certificate so the whole width fits the phone, and re-fits on rotate/resize.
+================================================================ */
+(function () {
+  'use strict';
+  var stage = document.querySelector('.cert-stage');
+  var page = document.querySelector('.certificate');
+  if (!stage || !page) return;
+
+  function fit() {
+    page.style.transform = '';
+    page.style.transformOrigin = '';
+    stage.style.height = '';
+    stage.style.overflow = '';
+
+    var vw = document.documentElement.clientWidth;
+    var w = page.offsetWidth;
+    var s = (vw - 16) / w;            // 8px gap on each side
+    if (s >= 1) return;               // big screen: leave as is
+
+    var box = page.querySelector('.bf-box');            // bonafide / study: show only the box, not empty paper
+    var h = page.offsetHeight;
+
+    page.style.transformOrigin = 'top left';
+    page.style.transform = 'translate(8px, 0) scale(' + s + ')';
+    stage.style.overflow = 'hidden';
+    stage.style.height = (h * s + 40) + 'px';
+  }
+
+  fit();
+  window.addEventListener('resize', fit);
+  window.addEventListener('orientationchange', fit);
+})();
