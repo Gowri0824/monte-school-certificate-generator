@@ -96,3 +96,15 @@ body.cert-page {
     padding: 0 !important;
   }
 }
+
+/* ===== Phone tip (paper size hint) ===== */
+.phone-tip {
+  margin: 8px 8px 0;
+  padding: 8px 10px;
+  background: #fff8e1;
+  border: 1px solid #ffe082;
+  border-radius: 8px;
+  font-size: 12px;
+  line-height: 1.45;
+  color: #5d4037;
+}

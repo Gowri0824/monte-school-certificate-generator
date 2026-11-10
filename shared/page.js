@@ -67,3 +67,21 @@
   window.addEventListener('resize', fit);
   window.addEventListener('orientationchange', fit);
 })();
+
+/* ================================================================
+   PHONE TIP — shows which paper size to pick when saving a PDF on a phone.
+   (Phones ignore the paper size written in the page, so the person must choose it.)
+   Screen only: hidden when printing.
+================================================================ */
+(function () {
+  'use strict';
+  var cert = document.querySelector('.certificate');
+  var stage = document.querySelector('.cert-stage');
+  if (!cert || !stage || document.documentElement.clientWidth >= 700) return;
+  var paper = cert.classList.contains('monte-tc-replica') ? 'Legal' : 'A4';
+  var tip = document.createElement('div');
+  tip.className = 'phone-tip no-print';
+  tip.innerHTML = '<b>Saving PDF on phone:</b> tap Print / Save PDF &rarr; Destination: <b>Save as PDF</b> &rarr; ' +
+    'Paper size: <b>' + paper + '</b> &rarr; Margins: <b>None</b> &rarr; Scale: <b>100%</b>';
+  stage.parentNode.insertBefore(tip, stage);
+})();
