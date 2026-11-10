@@ -1,0 +1,382 @@
+/* ================================================================
+   MONTÉ BONAFIDE CERTIFICATE
+   Follows the supplied reference image (Montessori Primary / High School bonafide):
+     header (logo + school name + address)  ->  two Rc.No. recognition lines
+     Admn.No. (right)  ->  title  ->  4 ruled lines of text  ->  DATE (left) / HEADMISTRESS (right)
+   Black text on white, A4 portrait (210 x 297 mm), one page.
+   Printed words are bold, typed values sit on a thin line.
+   This file only affects this one certificate page.
+================================================================ */
+.bf-page {
+  position: relative;
+  width: 210mm;
+  height: 297mm;
+  margin: 0 auto;
+  padding: 12mm 14mm 0 14mm;
+  background: #fff;
+  color: #000;
+  overflow: hidden;
+  font-family: Tahoma, Verdana, "DejaVu Sans", Arial, sans-serif;
+  font-size: 11.5pt;
+  box-shadow: 0 6px 40px rgba(0, 0, 0, .28);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.bf-page * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* header picture cropped from the reference image (logo, MONTESSORI, PRIMARY / HIGH SCHOOL, address) */
+.bf-head {
+  display: block;
+  width: 170mm;
+  height: auto;
+  margin: 0 auto;
+}
+
+/* border copied from MIRS_BONAFIDE.doc: thin black box with a grey offset shadow,
+   and a thin black line under the header block */
+.bf-box {
+  border: 0.75pt solid #000;
+  box-shadow: none;
+  padding: 3mm 0 12mm;
+  background: #fff;
+}
+
+.bf-header {
+  border-bottom: 0.75pt solid #000;
+  padding-bottom: 3mm;
+}
+
+/* recognition lines (real text, copied exactly from the reference) */
+.bf-rc {
+  margin: 3mm 0 0;
+  width: 100%;
+  font-size: 9.4pt;
+  font-weight: 700;
+  line-height: 6.4mm;
+  text-align: center;
+}
+
+.bf-rc>div {
+  white-space: nowrap;
+  text-align: center;
+}
+
+/* Admn.No. at the right */
+.bf-adm {
+  margin-top: 8mm;
+  padding-right: 8mm;
+  display: flex;
+  justify-content: flex-end;
+  align-items: baseline;
+  gap: 2mm;
+  font-weight: 700;
+  line-height: 8mm;
+}
+
+.bf-adm .bf-line {
+  flex: 0 0 38mm;
+  text-align: center;
+}
+
+/* title */
+.bf-title {
+  margin-top: 8.5mm;
+  text-align: center;
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
+  font-size: 19pt;
+  font-weight: 700;
+  line-height: 10mm;
+  white-space: nowrap;
+}
+
+/* ruled lines of text */
+.bf-body {
+  margin-top: 12mm;
+  padding: 0 7mm 0 7mm;
+}
+
+.bf-row {
+  display: flex;
+  align-items: baseline;
+  gap: 2mm;
+  min-height: 9.8mm;
+  font-weight: 700;
+  white-space: nowrap;
+  line-height: 9.8mm;
+}
+
+.bf-row>span:not(.bf-line) {
+  flex: 0 0 auto;
+}
+
+.bf-line {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: 6mm;
+  height: 6mm;
+  overflow: hidden;
+  border-bottom: 0.7pt solid #000;
+  text-align: left;
+  padding: 0 1mm;
+  line-height: 6mm;
+  font-weight: 700;
+  position: relative;
+  top: 0;
+}
+
+.bf-short {
+  flex: 0 0 22mm;
+  text-align: center;
+}
+
+.bf-year {
+  flex: 0 0 17mm;
+  text-align: center;
+}
+
+/* date of birth: figures and words flow and wrap like the two ruled lines in the reference */
+.bf-dob {
+  font-weight: 700;
+  line-height: 9.8mm;
+  text-align: left;
+}
+
+.bf-ul {
+  font-weight: 700;
+  text-decoration: underline;
+  text-decoration-thickness: 0.7pt;
+  text-underline-offset: 1.6mm;
+}
+
+.bf-ul:empty {
+  display: inline-block;
+  border-bottom: 0.7pt solid #000;
+  height: 5mm;
+  vertical-align: baseline;
+}
+
+.bf-ul-fig:empty {
+  min-width: 42mm;
+}
+
+.bf-ul-words:empty {
+  min-width: 70mm;
+}
+
+/* date + headmistress */
+.bf-foot {
+  margin-top: 16mm;
+  padding: 0 7mm 0 7mm;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-weight: 700;
+}
+
+.bf-foot-date {
+  display: flex;
+  align-items: baseline;
+  gap: 3mm;
+}
+
+.bf-fdate {
+  font-weight: 700;
+  min-width: 30mm;
+}
+
+.bf-foot-sign {
+  margin-right: 8mm;
+  padding-top: 14mm;
+}
+
+/* free space above for the signature */
+
+@media print {
+  .bf-page {
+    margin: 0 !important;
+    box-shadow: none !important;
+    height: 296mm;
+    page-break-after: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* ===== Half-page size & position (same as the Study certificate) =====
+   Box: 188 x 128 mm, centred left-right, 9 mm from the top of the A4 page */
+.bf-page {
+  box-sizing: border-box;
+  height: 297mm;
+  padding: 9mm 0 0;
+  /* 9mm = gap from top of paper */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 9.5pt;
+}
+
+.bf-page .bf-box {
+  flex: 0 0 188mm;
+  width: 188mm;
+  height: 128mm;
+  padding: 2mm 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bf-head {
+  width: 108mm;
+}
+
+.bf-header {
+  padding-bottom: 1.5mm;
+}
+
+.bf-rc {
+  margin-top: 1.5mm;
+  font-size: 7pt;
+  line-height: 4mm;
+}
+
+.bf-adm {
+  margin-top: 2mm;
+  padding-right: 10mm;
+  line-height: 6mm;
+}
+
+.bf-adm .bf-line {
+  flex: 0 0 42mm;
+}
+
+.bf-title {
+  margin-top: 2mm;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12pt;
+  line-height: 6mm;
+}
+
+.bf-body {
+  margin-top: 3mm;
+  padding: 0 9mm;
+}
+
+.bf-row {
+  min-height: 7.6mm;
+  line-height: 7.6mm;
+  gap: 1.6mm;
+}
+
+.bf-line {
+  min-height: 5mm;
+  height: 5mm;
+  line-height: 5mm;
+}
+
+.bf-short {
+  flex: 0 0 18mm;
+}
+
+.bf-year {
+  flex: 0 0 14mm;
+}
+
+.bf-dob {
+  line-height: 7.6mm;
+}
+
+.bf-ul {
+  text-underline-offset: 1.2mm;
+}
+
+.bf-foot {
+  margin-top: auto;
+  padding: 0 9mm 3.5mm;
+}
+
+.bf-foot-sign {
+  padding-top: 0;
+  margin-right: 6mm;
+}
+
+/* ===== Paper-match text style (Bonafide only) ===== */
+body[data-cert-id="monte-bonafide"] .bf-page {
+  font-family: Verdana, Tahoma, "DejaVu Sans", Arial, sans-serif;
+  font-size: 10pt;
+  letter-spacing: 0.15pt;
+  font-weight: 700;
+}
+
+/* header logo bigger, no line under header */
+body[data-cert-id="monte-bonafide"] .bf-head {
+  width: 140mm;
+}
+
+body[data-cert-id="monte-bonafide"] .bf-header {
+  border-bottom: 0;
+  padding-bottom: 0;
+}
+
+body[data-cert-id="monte-bonafide"] .bf-rc {
+  margin-top: 1mm;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.3pt;
+  line-height: 4.6mm;
+}
+
+body[data-cert-id="monte-bonafide"] .bf-adm {
+  margin-top: 2.5mm;
+  padding-right: 11mm;
+  font-weight: 700;
+  line-height: 6mm;
+}
+
+body[data-cert-id="monte-bonafide"] .bf-adm .bf-line {
+  flex: 0 0 34mm;
+}
+
+/* heavy title like the paper */
+body[data-cert-id="monte-bonafide"] .bf-title {
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
+  font-size: 19pt;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 10mm;
+  margin-top: 2mm;
+}
+
+/* text lines */
+body[data-cert-id="monte-bonafide"] .bf-body {
+  margin-top: 3mm;
+  padding: 0 11mm 0 10mm;
+}
+
+body[data-cert-id="monte-bonafide"] .bf-row,
+body[data-cert-id="monte-bonafide"] .bf-dob {
+  font-weight: 700;
+  min-height: 9mm;
+  line-height: 9mm;
+}
+
+body[data-cert-id="monte-bonafide"] .bf-row {
+  gap: 2mm;
+}
+
+body[data-cert-id="monte-bonafide"] .bf-row:first-child>span:first-child {
+  margin-left: 12mm;
+}
+
+/* DATE / HEADMISTRESS */
+body[data-cert-id="monte-bonafide"] .bf-foot {
+  padding: 0 10mm 3.5mm 11mm;
+  font-weight: 700;
+  letter-spacing: 0.3pt;
+}
+
+body[data-cert-id="monte-bonafide"] .bf-foot-sign {
+  margin-right: 10mm;
+}

@@ -1,0 +1,291 @@
+/* Study & Conduct certificate: reuses bonafide.css (border, header, Rc lines, rows); only the differences are here. */
+
+.bf-mid {
+  text-align: center;
+}
+
+/* ---- Half-page layout (study certificate only) ----
+   Box size and position follow MIRS_STUDY_CERTIFICATE_2026-27_1.doc: about 188 x 128 mm,
+   centred left-right, 9 mm from the top of the A4 page. Inside, the lines are arranged
+   like the supplied paper certificate photo (7 text lines, Admn.No. at right, DATE / HEADMISTRESS). */
+.bf-page {
+  box-sizing: border-box;
+  width: 210mm;
+  height: 297mm;
+  padding: 9mm 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 9.5pt;
+}
+
+.bf-page .bf-box {
+  flex: 0 0 188mm;
+  width: 188mm;
+  height: 128mm;
+  padding: 2mm 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bf-head {
+  width: 108mm;
+}
+
+.bf-header {
+  padding-bottom: 1.5mm;
+}
+
+.bf-rc {
+  margin-top: 1.5mm;
+  font-size: 7pt;
+  line-height: 4mm;
+}
+
+.bf-adm {
+  margin-top: 2mm;
+  padding-right: 10mm;
+  line-height: 6mm;
+}
+
+.bf-adm .bf-line {
+  flex: 0 0 42mm;
+}
+
+.sc-title {
+  font-size: 11.5pt;
+  line-height: 6mm;
+  margin-top: 1.5mm;
+}
+
+.bf-body {
+  margin-top: 2.5mm;
+  padding: 0 9mm;
+}
+
+.bf-row {
+  min-height: 7.6mm;
+  line-height: 7.6mm;
+  gap: 1.6mm;
+}
+
+.bf-line {
+  min-height: 5mm;
+  height: 5mm;
+  line-height: 5mm;
+}
+
+.bf-short {
+  flex: 0 0 18mm;
+}
+
+.bf-mid {
+  flex: 0 0 34mm;
+}
+
+.sc-indent {
+  margin-left: 9mm;
+}
+
+.bf-foot {
+  margin-top: auto;
+  padding: 0 9mm 3.5mm;
+}
+
+.bf-foot-sign {
+  padding-top: 0;
+  margin-right: 6mm;
+}
+
+@media print {
+  .bf-page {
+    margin: 0 !important;
+    height: 296mm;
+  }
+}
+
+/* Study & Conduct certificate: reuses bonafide.css (border, header, Rc lines, rows); only the differences are here. */
+
+.bf-mid {
+  text-align: center;
+}
+
+/* ---- Half-page layout (study certificate only) ----
+   Box size and position follow MIRS_STUDY_CERTIFICATE_2026-27_1.doc: about 188 x 128 mm,
+   centred left-right, 9 mm from the top of the A4 page. Inside, the lines are arranged
+   like the supplied paper certificate photo (7 text lines, Admn.No. at right, DATE / HEADMISTRESS). */
+.bf-page {
+  box-sizing: border-box;
+  width: 210mm;
+  height: 297mm;
+  padding: 9mm 0 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  font-size: 9.5pt;
+}
+
+.bf-page .bf-box {
+  flex: 0 0 188mm;
+  width: 188mm;
+  height: 128mm;
+  padding: 2mm 0 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.bf-head {
+  width: 108mm;
+}
+
+.bf-header {
+  padding-bottom: 1.5mm;
+}
+
+.bf-rc {
+  margin-top: 1.5mm;
+  font-size: 7pt;
+  line-height: 4mm;
+}
+
+.bf-adm {
+  margin-top: 2mm;
+  padding-right: 10mm;
+  line-height: 6mm;
+}
+
+.bf-adm .bf-line {
+  flex: 0 0 42mm;
+}
+
+.sc-title {
+  font-size: 11.5pt;
+  line-height: 6mm;
+  margin-top: 1.5mm;
+}
+
+.bf-body {
+  margin-top: 2.5mm;
+  padding: 0 9mm;
+}
+
+.bf-row {
+  min-height: 7.6mm;
+  line-height: 7.6mm;
+  gap: 1.6mm;
+}
+
+.bf-line {
+  min-height: 5mm;
+  height: 5mm;
+  line-height: 5mm;
+}
+
+.bf-short {
+  flex: 0 0 18mm;
+}
+
+.bf-mid {
+  flex: 0 0 34mm;
+}
+
+.sc-indent {
+  margin-left: 9mm;
+}
+
+.bf-foot {
+  margin-top: auto;
+  padding: 0 9mm 3.5mm;
+}
+
+.bf-foot-sign {
+  padding-top: 0;
+  margin-right: 6mm;
+}
+
+@media print {
+  .bf-page {
+    margin: 0 !important;
+    height: 296mm;
+  }
+}
+
+/* ===== Paper-match text style (Study & Conduct only) ===== */
+.bf-page {
+  font-family: Verdana, Tahoma, "DejaVu Sans", Arial, sans-serif;
+  font-size: 10pt;
+  letter-spacing: 0.15pt;
+  font-weight: 700;
+}
+
+.bf-head {
+  width: 126mm;
+}
+
+.bf-header {
+  padding-bottom: 1.5mm;
+}
+
+.bf-rc {
+  margin-top: 1mm;
+  font-size: 8pt;
+  font-weight: 700;
+  letter-spacing: 0.3pt;
+  line-height: 4.4mm;
+}
+
+.bf-adm {
+  margin-top: 2.5mm;
+  padding-right: 15mm;
+  font-weight: 700;
+  line-height: 6mm;
+}
+
+.bf-adm .bf-line {
+  flex: 0 0 34mm;
+}
+
+.sc-title {
+  font-family: "Arial Black", Arial, Helvetica, sans-serif;
+  font-size: 14.5pt;
+  font-weight: 900;
+  letter-spacing: 0;
+  line-height: 8mm;
+  margin-top: 2mm;
+}
+
+.bf-body {
+  margin-top: 2mm;
+  padding: 0 11mm 0 10mm;
+}
+
+.bf-row {
+  font-weight: 700;
+  min-height: 8.2mm;
+  line-height: 8.2mm;
+  gap: 2mm;
+}
+
+.sc-indent {
+  margin-left: 12mm;
+}
+
+.bf-foot {
+  padding: 0 10mm 3.5mm 11mm;
+  font-weight: 700;
+  letter-spacing: 0.3pt;
+}
+
+.bf-foot-sign {
+  margin-right: 10mm;
+}
+
+/* ===== Header logo + no line under header (Study & Conduct only) ===== */
+.bf-head {
+  width: 122mm;
+}
+
+.bf-header {
+  border-bottom: 0;
+  padding-bottom: 0;
+}

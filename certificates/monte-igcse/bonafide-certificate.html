@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monté School – Bonafide Certificate</title>
+  <!-- Monté · Bonafide Certificate (A4 portrait). Works offline.
+       Layout and wording follow the supplied reference image (Montessori Primary / High School bonafide).
+       Opened from the website's "Generate" button, it shows the values typed in the form.
+       Opened directly, it shows sample values. -->
+  <link rel="stylesheet" href="../../shared/preview.css">
+  <link rel="stylesheet" href="../../shared/print.css">
+  <link rel="stylesheet" href="bonafide.css">
+</head>
+
+<body class="cert-page" data-cert-id="monte-bonafide" data-home="../../index.html">
+  <div class="cert-toolbar no-print">
+    <a class="ct-back" id="ct-back" href="../../index.html">&larr; Edit Details</a>
+    <span class="ct-label">Certificate Preview — A4 Portrait<span id="ct-sample"></span></span>
+    <button class="ct-print" id="btn-print" onclick="window.print()">&#128424; Print / Save PDF</button>
+  </div>
+  <div class="cert-stage">
+    <div id="bf-page" class="certificate bf-page">
+
+      <div class="bf-box">
+        <div class="bf-header">
+          <img class="bf-head" src="assets/bonafide-header.png"
+            alt="Montessori Primary / High School, Vidya Nagar, Kurnool-518 002">
+          <div class="bf-rc">
+            <div>(Rc.No.646/B1/2020, Dated: 14.01.2020, D.E.O, KNL, for Baby - V, from 2020-21-2029-30)</div>
+            <div>(Rc.No.1193/B2/2020, Dated: 24.03.2020, R.J.D., Kadapa, for VI-X, from 2020-21-2029-30)</div>
+          </div>
+        </div><!-- /bf-header -->
+
+        <div class="bf-adm"><span>Admn.No.</span><span class="bf-line bf-val" data-field="admNo"></span></div>
+        <div class="bf-title">BONAFIDE CERTIFICATE</div>
+
+        <div class="bf-body">
+          <div class="bf-row"><span>This is to certify that Chi.</span><span class="bf-line bf-val"
+              data-field="studentName"></span></div>
+          <div class="bf-row"><span>Son/Daughter of Sri</span><span class="bf-line bf-val"
+              data-field="fatherName"></span><span>is bonafide student of this</span></div>
+          <div class="bf-row"><span>institution studying</span><span class="bf-line bf-short bf-val"
+              data-field="className"></span><span>Class during the academic year</span><span
+              class="bf-line bf-year bf-val" data-field="yearFrom"></span><span>-</span><span
+              class="bf-line bf-year bf-val" data-field="yearTo"></span><span>.</span></div>
+          <p class="bf-dob">His / Her date of birth is <span class="bf-ul bf-ul-fig" data-field="dobFigures"></span>
+            (<span class="bf-ul bf-ul-words" data-field="dobWords"></span>) as per our School Records.</p>
+        </div>
+
+        <div class="bf-foot">
+          <div class="bf-foot-date"><span>DATE :</span> <span class="bf-fdate" data-field="dateOfIssue"></span></div>
+          <div class="bf-foot-sign">HEADMISTRESS</div>
+        </div>
+
+      </div><!-- /bf-box -->
+    </div><!-- /bf-page -->
+  </div>
+  <script>window.CERT_SAMPLE = {
+      "admNo": "3495/2021-22",
+      "studentName": "UBBA SURYA SAI",
+      "fatherName": "U GIDDAIAH",
+      "className": "XII",
+      "yearFrom": "2026",
+      "yearTo": "2027",
+      "dobFigures": "13/03/2010",
+      "dobWords": "Thirteenth March Two Thousand Ten",
+      "dateOfIssue": ""
+    };</script>
+  <script src="../../shared/page.js"></script>
+  <script src="bonafide.js"></script>
+</body>
+
+</html>

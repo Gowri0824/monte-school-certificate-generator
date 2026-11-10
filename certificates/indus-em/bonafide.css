@@ -1,0 +1,215 @@
+/* INDUS EM SCHOOL - BONAFIDE CERTIFICATE (A4 portrait, box 188 x 128 mm, 9 mm from top) */
+
+.bf-page {
+    position: relative;
+    box-sizing: border-box;
+    width: 210mm;
+    height: 297mm;
+    margin: 0 auto;
+    padding: 9mm 0 0;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    background: #fff;
+    color: #000;
+    overflow: hidden;
+    font-family: Verdana, Tahoma, "DejaVu Sans", Arial, sans-serif;
+    font-size: 10pt;
+    letter-spacing: 0.15pt;
+    font-weight: 700;
+    box-shadow: 0 6px 40px rgba(0, 0, 0, .28);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+}
+
+.bf-page * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* border box */
+.bf-page .bf-box {
+    flex: 0 0 188mm;
+    width: 188mm;
+    height: 128mm;
+    padding: 2mm 0 0;
+    display: flex;
+    flex-direction: column;
+    border: 0.75pt solid #000;
+    background: #fff;
+}
+
+/* header picture + Rc.No. lines */
+.bf-header {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.bf-head {
+    display: block;
+    width: 130mm;
+    height: auto;
+    margin: 0 auto;
+}
+
+.bf-rc {
+    margin: 1mm 0 0;
+    width: 100%;
+    font-size: 8pt;
+    font-weight: 700;
+    letter-spacing: 0.3pt;
+    line-height: 4.4mm;
+    text-align: center;
+}
+
+.bf-rc>div {
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Admn.No. (right) */
+.bf-adm {
+    margin-top: 2.5mm;
+    padding-right: 15mm;
+    display: flex;
+    justify-content: flex-end;
+    align-items: baseline;
+    gap: 2mm;
+    font-weight: 700;
+    line-height: 6mm;
+}
+
+.bf-adm .bf-line {
+    flex: 0 0 34mm;
+    text-align: center;
+}
+
+/* title */
+.bf-title {
+    margin-top: 2mm;
+    text-align: center;
+    font-family: "Arial Black", Arial, Helvetica, sans-serif;
+    font-size: 19pt;
+    font-weight: 900;
+    letter-spacing: 0;
+    line-height: 10mm;
+    white-space: nowrap;
+}
+
+/* text lines */
+.bf-body {
+    margin-top: 2mm;
+    padding: 0 11mm 0 10mm;
+}
+
+.bf-row {
+    display: flex;
+    align-items: baseline;
+    gap: 2mm;
+    min-height: 9mm;
+    line-height: 9mm;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.bf-row>span:not(.bf-line) {
+    flex: 0 0 auto;
+}
+
+.bf-line {
+    flex: 1 1 0;
+    min-width: 0;
+    height: 5mm;
+    min-height: 5mm;
+    overflow: hidden;
+    border-bottom: 0.7pt solid #000;
+    text-align: left;
+    padding: 0 1mm;
+    line-height: 5mm;
+    font-weight: 700;
+    position: relative;
+    top: 0;
+}
+
+.bf-short {
+    flex: 0 0 18mm;
+    text-align: center;
+}
+
+.bf-year {
+    flex: 0 0 14mm;
+    text-align: center;
+}
+
+/* first line indent */
+.bf-row:first-child>span:first-child {
+    margin-left: 12mm;
+}
+
+/* date of birth: figures and words flow and wrap */
+.bf-dob {
+    font-weight: 700;
+    min-height: 9mm;
+    line-height: 9mm;
+    text-align: left;
+}
+
+.bf-ul {
+    font-weight: 700;
+    text-decoration: underline;
+    text-decoration-thickness: 0.7pt;
+    text-underline-offset: 1.2mm;
+}
+
+.bf-ul:empty {
+    display: inline-block;
+    border-bottom: 0.7pt solid #000;
+    height: 5mm;
+    vertical-align: baseline;
+}
+
+.bf-ul-fig:empty {
+    min-width: 42mm;
+}
+
+.bf-ul-words:empty {
+    min-width: 70mm;
+}
+
+/* DATE (left) / HEADMISTRESS (right) */
+.bf-foot {
+    margin-top: auto;
+    padding: 0 10mm 3.5mm 11mm;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    font-weight: 700;
+    letter-spacing: 0.3pt;
+}
+
+.bf-foot-date {
+    display: flex;
+    align-items: baseline;
+    gap: 3mm;
+}
+
+.bf-fdate {
+    font-weight: 700;
+    min-width: 30mm;
+}
+
+.bf-foot-sign {
+    margin-right: 10mm;
+}
+
+/* print */
+@media print {
+    .bf-page {
+        margin: 0 !important;
+        box-shadow: none !important;
+        height: 296mm;
+        page-break-after: avoid;
+        page-break-inside: avoid;
+    }
+}

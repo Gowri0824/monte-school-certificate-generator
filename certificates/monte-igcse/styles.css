@@ -1,0 +1,405 @@
+/* ================================================================
+   MONTÉ TRANSFER CERTIFICATE  (rebuilt from "130629 TC SOFT COPY.doc")
+   Fonts / sizes / colours below are the ones used in the Word file:
+     School name ....... Copperplate Gothic Bold 32pt  #0070C0
+     Motto ............. Times New Roman Bold 10pt, yellow highlight
+     Affiliation/address Arial Rounded MT Bold 9pt (affiliation italic)
+     Title ............. Copperplate Gothic Bold 13pt  #7030A0, underlined
+     Labels / values ... Verdana 11pt   (Book/Sl/Adm numbers: red bold)
+   The fonts are looked up on the computer that opens the page (works
+   offline). If a font is not installed, the fallback after it is used.
+================================================================ */
+@font-face {
+  font-family: "TC Copperplate";
+  src: local("Copperplate Gothic Bold"), local("CopperplateGothic-Bold"), local("COPRGTB");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "TC Rounded";
+  src: local("Arial Rounded MT Bold"), local("ArialRoundedMTBold"), local("ARLRDBD");
+  font-weight: 700;
+  font-style: normal;
+}
+
+.monte-tc-replica {
+  width: 215.9mm !important;
+  /* Legal 8.5in */
+  height: 355.6mm !important;
+  /* Legal 14in  */
+  min-height: 355.6mm !important;
+  page: legal-tc;
+  padding: 0 !important;
+  margin: 0 auto !important;
+  overflow: hidden !important;
+  position: relative !important;
+  background: #fff !important;
+  color: #000;
+  font-family: Verdana, "DejaVu Sans", Geneva, Arial, sans-serif !important;
+  font-size: 11pt;
+  box-shadow: 0 6px 40px rgba(0, 0, 0, .28);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+.monte-tc-replica * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* ── "ORIGINAL" mark, top right ── */
+.monte-tc-replica .tc-copy-mark {
+  position: absolute;
+  right: 13.1mm;
+  top: 18.1mm;
+  font-family: "Arial Narrow", "Liberation Sans Narrow", Arial, sans-serif;
+  font-stretch: condensed;
+  font-size: 11pt;
+  font-weight: 700;
+  line-height: 5.5mm;
+}
+
+/* ── Logo (original JPEG from the Word file) ── */
+.monte-tc-replica .tc-logo {
+  position: absolute;
+  left: 27mm;
+  top: 14.7mm;
+  width: 28.9mm;
+  height: auto;
+  display: block;
+}
+
+/* ── Heading block ── */
+.monte-tc-replica .tc-head {
+  position: absolute;
+  left: 12mm;
+  right: 8mm;
+  top: 20mm;
+  text-align: center;
+}
+
+.monte-tc-replica .tc-school {
+  height: 13.7mm;
+  line-height: 13.7mm;
+  font-family: "TC Copperplate", "Trebuchet MS", Arial, sans-serif;
+  font-size: 32pt;
+  font-weight: 700;
+  color: #0070c0;
+  white-space: nowrap;
+}
+
+.monte-tc-replica .tc-motto {
+  height: 5.1mm;
+  line-height: 5.1mm;
+  font-family: "Times New Roman", Times, "Liberation Serif", serif;
+  font-size: 10pt;
+  font-weight: 700;
+}
+
+.monte-tc-replica .tc-motto span {
+  background: #ffff00;
+  padding: 0 .3mm;
+}
+
+.monte-tc-replica .tc-affil,
+.monte-tc-replica .tc-addr {
+  height: 3.8mm;
+  line-height: 3.8mm;
+  font-family: "TC Rounded", "Arial Rounded MT Bold", Arial, sans-serif;
+  font-size: 9pt;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.monte-tc-replica .tc-affil {
+  font-style: italic;
+}
+
+.monte-tc-replica .tc-title {
+  margin-top: 2.7mm;
+  height: 5.6mm;
+  line-height: 5.6mm;
+  font-family: "TC Copperplate", "Trebuchet MS", Arial, sans-serif;
+  font-size: 13pt;
+  font-weight: 700;
+  color: #7030a0;
+}
+
+/* One single text underline = always continuous */
+.monte-tc-replica .tc-title span {
+  text-decoration: underline;
+  text-decoration-thickness: 1.5pt;
+  text-underline-offset: .9mm;
+  text-decoration-skip-ink: none;
+}
+
+/* ── Dotted leader (shared): evenly spaced square dots ── */
+.monte-tc-replica .tc-idv::after,
+.monte-tc-replica .tcr-v::after,
+.monte-tc-replica .tcr-subj .tcr-v::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: .36mm;
+  background: radial-gradient(circle at 50% 50%, #000 0, #000 .15mm, rgba(0, 0, 0, 0) .19mm) 0 0 / 1mm .36mm repeat-x;
+  pointer-events: none;
+}
+
+/* ── Book / Sl. / Admission numbers ── */
+.monte-tc-replica .tc-ids {
+  position: absolute;
+  left: 12mm;
+  right: 8mm;
+  top: 57.2mm;
+  height: 4.7mm;
+  display: flex;
+  line-height: 4.7mm;
+}
+
+.monte-tc-replica .tc-id {
+  display: flex;
+  height: 4.7mm;
+}
+
+.monte-tc-replica .g1 {
+  width: 56mm;
+}
+
+.monte-tc-replica .g2 {
+  width: 45mm;
+  padding-left: 2mm;
+}
+
+.monte-tc-replica .g3 {
+  flex: 1;
+  padding-left: 2mm;
+}
+
+.monte-tc-replica .tc-idl {
+  white-space: nowrap;
+  padding-right: 1.5mm;
+}
+
+.monte-tc-replica .tc-idl b {
+  font-weight: 700;
+}
+
+.monte-tc-replica .tc-idv {
+  position: relative;
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.monte-tc-replica .tc-idv.left {
+  text-align: left;
+  padding-left: 4mm;
+}
+
+.monte-tc-replica .tc-idv::after {
+  bottom: -.5mm;
+}
+
+/* ── Numbered particulars ── */
+.monte-tc-replica .tc-rows {
+  position: absolute;
+  left: 12mm;
+  right: 8mm;
+  top: 66.6mm;
+}
+
+.monte-tc-replica .tcr {
+  display: grid;
+  grid-template-columns: 7.9mm 87.2mm 1fr;
+  align-items: start;
+  margin-top: 2.5mm;
+  line-height: 4.6mm;
+}
+
+.monte-tc-replica .tcr:first-child {
+  margin-top: 0;
+}
+
+.monte-tc-replica .tcr.gap {
+  margin-top: 3.4mm;
+}
+
+.monte-tc-replica .tcr .tcr-v {
+  align-self: end;
+}
+
+.monte-tc-replica .tcr.top .tcr-v {
+  align-self: start;
+}
+
+.monte-tc-replica .tcr-n,
+.monte-tc-replica .tcr-l {
+  white-space: nowrap;
+}
+
+.monte-tc-replica .tcr-v {
+  position: relative;
+  display: flex;
+  height: 4.6mm;
+  min-width: 0;
+}
+
+.monte-tc-replica .tcr-v::after {
+  bottom: -.5mm;
+}
+
+.monte-tc-replica .tcr-v>i {
+  font-style: normal;
+  width: 2.4mm;
+  flex: none;
+}
+
+.monte-tc-replica .tc-val {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  text-transform: none;
+  font-weight: 400;
+}
+
+.monte-tc-replica .tc-val.small {
+  font-size: 9pt;
+}
+
+.monte-tc-replica .tc-val.meta {
+  color: #f00;
+  font-weight: 700;
+}
+
+.monte-tc-replica .tc-idv .tc-val {
+  display: block;
+}
+
+/* 11. Subjects studied: two ruled lines like the original */
+.monte-tc-replica .tcr-subj {
+  align-items: start;
+}
+
+.monte-tc-replica .tcr-subj .tcr-n,
+.monte-tc-replica .tcr-subj .tcr-l {
+  line-height: 7.6mm;
+}
+
+.monte-tc-replica .tcr-subj .tcr-v {
+  align-self: start;
+}
+
+.monte-tc-replica .tcr-subj .tcr-v {
+  display: block;
+  height: 15.2mm;
+  line-height: 7.6mm;
+}
+
+.monte-tc-replica .tcr-subj .tcr-v::before {
+  top: 7.1mm;
+}
+
+.monte-tc-replica .tcr-subj .tcr-v::after {
+  bottom: .1mm;
+}
+
+.monte-tc-replica .tcr-subj .tcr-v>i {
+  position: absolute;
+  left: 0;
+  width: auto;
+}
+
+.monte-tc-replica .tcr-subj .c1 {
+  top: 0;
+}
+
+.monte-tc-replica .tcr-subj .c2 {
+  top: 7.6mm;
+}
+
+.monte-tc-replica .tc-val.subj {
+  display: block;
+  height: 15.2mm;
+  margin-left: 2.4mm;
+  padding-top: 0;
+  font-size: 10pt;
+  line-height: 7.6mm;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow: hidden;
+}
+
+/* ── Signatures: only "Principal" is bold ── */
+.monte-tc-replica .tc-signature-footer {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 24mm;
+  height: 10mm;
+  font-family: Verdana, "DejaVu Sans", Geneva, Arial, sans-serif;
+  font-size: 11pt;
+  font-weight: 400;
+  line-height: 4.7mm;
+  color: #000;
+}
+
+.monte-tc-replica .tc-signature-footer>div {
+  position: absolute;
+  top: 0;
+  white-space: nowrap;
+}
+
+.monte-tc-replica .sg-teacher {
+  left: 12mm;
+}
+
+.monte-tc-replica .sg-checked {
+  left: 69mm;
+  width: 63mm;
+  text-align: center;
+}
+
+.monte-tc-replica .sg-checked small {
+  display: block;
+  font-size: 11pt;
+  font-weight: 400;
+}
+
+.monte-tc-replica .sg-principal {
+  left: 160.3mm;
+}
+
+.monte-tc-replica .sg-principal strong {
+  font-weight: 700;
+  font-style: italic;
+}
+
+/* ── Print: one Legal page (8.5 x 14 in), colours kept ──
+   Named page, so only the Monté TC prints on Legal; the other certificates stay A4. */
+@page legal-tc {
+  size: 215.9mm 355.6mm;
+  margin: 0;
+}
+
+@media print {
+  .monte-tc-replica {
+    width: 215.9mm !important;
+    height: 355.6mm !important;
+    min-height: 355.6mm !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    page-break-after: avoid !important;
+    break-after: avoid-page !important;
+  }
+
+  .monte-tc-replica,
+  .monte-tc-replica * {
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+}

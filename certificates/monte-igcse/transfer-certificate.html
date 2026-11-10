@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monté School – Transfer Certificate</title>
+  <!-- Monté IGCSE · Transfer Certificate (Legal 8.5 x 14 in, portrait). Works offline.
+       Opened from the website's "Generate" button, it shows the values typed in the form.
+       Opened directly, it shows the sample values from the original Word certificate. -->
+  <link rel="stylesheet" href="../../shared/preview.css">
+  <link rel="stylesheet" href="../../shared/print.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .monte-tc-replica {
+      margin: 0 auto !important;
+    }
+
+    @media print {
+      .monte-tc-replica {
+        margin: 0 !important;
+      }
+    }
+  </style>
+</head>
+
+<body class="cert-page" data-cert-id="monte-tc" data-home="../../index.html">
+  <div class="cert-toolbar no-print">
+    <a class="ct-back" id="ct-back" href="../../index.html">&larr; Edit Details</a>
+    <span class="ct-label">Certificate Preview — Legal (8.5 × 14 in) Portrait<span id="ct-sample"></span></span>
+    <button class="ct-print" id="btn-print" onclick="window.print()">&#128424; Print / Save PDF</button>
+  </div>
+  <div class="cert-stage">
+    <div id="tc-page" class="certificate a4-page monte-tc-replica">
+      <!-- Rebuilt from the original Word certificate (130629 TC SOFT COPY.doc).
+           Everything below is real HTML text (no background picture), so fonts,
+           colours and dotted lines are controlled in css/style.css (section "MONTÉ TRANSFER CERTIFICATE"). -->
+      <span class="tc-copy-mark">ORIGINAL</span>
+      <img class="tc-logo" src="assets/monte-logo.jpg" alt="Monté School logo">
+      <div class="tc-head">
+        <div class="tc-school">MONTÉ SCHOOL</div>
+        <div class="tc-motto"><span>Help the child to help him self</span></div>
+        <div class="tc-affil">(Affiliated to CBSE, New Delhi &#8211; Affiliation No.130629, School Code: 56313)</div>
+        <div class="tc-addr">Indus Nagar, Pandipadu (V), Kallur (M), KURNOOL (Dist.), Andhra Pradesh&#8211; 518002,
+          India.</div>
+        <div class="tc-title"><span>TRANSFER CERTIFICATE</span></div>
+      </div>
+      <div class="tc-ids">
+        <div class="tc-id g1"><span class="tc-idl">Book No<b>.</b></span><span class="tc-idv"><span class="tc-val meta"
+              data-field="bookNo"></span></span></div>
+        <div class="tc-id g2"><span class="tc-idl">Sl<b>.</b> No<b>.</b></span><span class="tc-idv"><span
+              class="tc-val meta" data-field="slNo"></span></span></div>
+        <div class="tc-id g3"><span class="tc-idl">Admission No<b>.</b></span><span class="tc-idv left"><span
+              class="tc-val meta" data-field="admNo"></span></span></div>
+      </div>
+      <div class="tc-rows">
+        <div class="tcr "><span class="tcr-n">1.</span><span class="tcr-l">Name of the Pupil</span><span
+            class="tcr-v"><i>:</i><span class="tc-val " data-field="studentName"></span></span></div>
+        <div class="tcr "><span class="tcr-n">2.</span><span class="tcr-l">Father’s / Guardian’s Name</span><span
+            class="tcr-v"><i>:</i><span class="tc-val " data-field="fatherName"></span></span></div>
+        <div class="tcr "><span class="tcr-n">3.</span><span class="tcr-l">Mother’s Name</span><span
+            class="tcr-v"><i>:</i><span class="tc-val " data-field="motherName"></span></span></div>
+        <div class="tcr "><span class="tcr-n">4.</span><span class="tcr-l">Nationality</span><span
+            class="tcr-v"><i>:</i><span class="tc-val " data-field="nationality"></span></span></div>
+        <div class="tcr "><span class="tcr-n">5.</span><span class="tcr-l">Whether the candidate belongs to SC or
+            ST</span><span class="tcr-v"><i>:</i><span class="tc-val " data-field="scst"></span></span></div>
+        <div class="tcr "><span class="tcr-n">6.</span><span class="tcr-l">Date of first admission in the school<br>With
+            class</span><span class="tcr-v"><i>:</i><span class="tc-val " data-field="dateOfAdmission"></span></span>
+        </div>
+        <div class="tcr "><span class="tcr-n">7.</span><span class="tcr-l">Date of Birth (in Christian era) according
+            to</span><span class="tcr-v"><i>:</i><span class="tc-val " data-field="dobFigures"></span></span></div>
+        <div class="tcr gap"><span class="tcr-n"></span><span class="tcr-l">Admission Register (in figures) (in
+            words)</span><span class="tcr-v"><i>:</i><span class="tc-val small" data-field="dobWords"></span></span>
+        </div>
+        <div class="tcr "><span class="tcr-n">8.</span><span class="tcr-l">Class in which the pupil last
+            studied</span><span class="tcr-v"><i>:</i><span class="tc-val " data-field="lastClassFig"></span></span>
+        </div>
+        <div class="tcr gap"><span class="tcr-n"></span><span class="tcr-l">(In figures) &amp; (in words)</span><span
+            class="tcr-v"><i>:</i><span class="tc-val " data-field="lastClassWrd"></span></span></div>
+        <div class="tcr top"><span class="tcr-n">9.</span><span class="tcr-l">School/Board Annual examination
+            last<br>Taken with result</span><span class="tcr-v"><i>:</i><span class="tc-val "
+              data-field="examResult"></span></span></div>
+        <div class="tcr top"><span class="tcr-n">10.</span><span class="tcr-l">Whether failed, if so once/twice in
+            the<br>Same class</span><span class="tcr-v"><i>:</i><span class="tc-val "
+              data-field="failedInfo"></span></span></div>
+        <div class="tcr tcr-subj"><span class="tcr-n">11.</span><span class="tcr-l">Subjects Studied</span>
+          <span class="tcr-v"><i class="c1">:</i><i class="c2">:</i><span class="tc-val subj"
+              data-field="subjects"></span></span>
+        </div>
+        <div class="tcr "><span class="tcr-n">12.</span><span class="tcr-l">Whether qualified for promotion to
+            the<br>Higher class</span><span class="tcr-v"><i>:</i><span class="tc-val "
+              data-field="qualifiedPromo"></span></span></div>
+        <div class="tcr "><span class="tcr-n"></span><span class="tcr-l">If so, to which class (In figure) (in
+            words)</span><span class="tcr-v"><i>:</i><span class="tc-val " data-field="nextClass"></span></span></div>
+        <div class="tcr "><span class="tcr-n">13.</span><span class="tcr-l">Month up to which the (pupil has
+            paid)<br>School dues paid</span><span class="tcr-v"><i>:</i><span class="tc-val "
+              data-field="duesPaid"></span></span></div>
+        <div class="tcr "><span class="tcr-n">14.</span><span class="tcr-l">Any fee concession availed of if so,
+            the<br>Nature of such concession</span><span class="tcr-v"><i>:</i><span class="tc-val "
+              data-field="feeConcession"></span></span></div>
+        <div class="tcr "><span class="tcr-n">15.</span><span class="tcr-l">Total No. of working days</span><span
+            class="tcr-v"><i>:</i><span class="tc-val " data-field="totalWorkDays"></span></span></div>
+        <div class="tcr "><span class="tcr-n">16.</span><span class="tcr-l">Total No. of working days
+            present</span><span class="tcr-v"><i>:</i><span class="tc-val " data-field="daysPresent"></span></span>
+        </div>
+        <div class="tcr "><span class="tcr-n">17.</span><span class="tcr-l">Whether NCC Cadet / Boy Scout / Girl
+            Guide<br>(Details may be given)</span><span class="tcr-v"><i>:</i><span class="tc-val "
+              data-field="nccScout"></span></span></div>
+        <div class="tcr "><span class="tcr-n">18.</span><span class="tcr-l">Games played or extra-curricular
+            activities<br>In which the pupil usually took part (mention<br>Achievement level here in)</span><span
+            class="tcr-v"><i>:</i><span class="tc-val " data-field="extracurricular"></span></span></div>
+        <div class="tcr "><span class="tcr-n">19</span><span class="tcr-l">General conduct</span><span
+            class="tcr-v"><i>:</i><span class="tc-val " data-field="conduct"></span></span></div>
+        <div class="tcr "><span class="tcr-n">20.</span><span class="tcr-l">Date of application for
+            certificate</span><span class="tcr-v"><i>:</i><span class="tc-val "
+              data-field="dateOfApplication"></span></span></div>
+        <div class="tcr "><span class="tcr-n">21.</span><span class="tcr-l">Date of issue of certificate</span><span
+            class="tcr-v"><i>:</i><span class="tc-val " data-field="dateOfIssue"></span></span></div>
+        <div class="tcr "><span class="tcr-n">22.</span><span class="tcr-l">Reasons for leaving the school</span><span
+            class="tcr-v"><i>:</i><span class="tc-val " data-field="reasonForLeaving"></span></span></div>
+        <div class="tcr "><span class="tcr-n">23.</span><span class="tcr-l">Any other Remarks</span><span
+            class="tcr-v"><i>:</i><span class="tc-val " data-field="remarks"></span></span></div>
+      </div>
+      <div class="tc-signature-footer" aria-label="Certificate signatures">
+        <div class="sg-teacher">Signature of Class Teacher</div>
+        <div class="sg-checked">Checked by<small>(State full name and designation)</small></div>
+        <div class="sg-principal"><strong>Principal</strong></div>
+      </div>
+    </div><!-- /tc-page -->
+  </div>
+  <script>window.CERT_SAMPLE = {
+      "bookNo": "04",
+      "slNo": "461",
+      "admNo": "207/2021-22",
+      "studentName": "NEMALI SREE PRAGNA",
+      "fatherName": "N RAVI KUMAR REDDY",
+      "motherName": "R RADHIKA",
+      "nationality": "INDIAN-HINDU-KAPU",
+      "scst": "---",
+      "dateOfAdmission": "16/08/2021, III-CLASS",
+      "dobFigures": "04/01/2014",
+      "dobWords": "FOURTH – JANUARY – TWO THOUSAND FOURTEEN",
+      "lastClassFig": "V-CLASS",
+      "lastClassWrd": "FIFTH CLASS",
+      "examResult": "PASSED",
+      "failedInfo": "---",
+      "subjects": "1. ENGLISH   2. TELUGU   3. HINDI   4. MATHEMATICS   5. SCIENCE   6.SOCIAL SCIENCE       7. ICT",
+      "qualifiedPromo": "YES, QUALIFIED",
+      "nextClass": "VI-CLASS, (SIXTH)",
+      "duesPaid": "YES",
+      "feeConcession": "NO",
+      "totalWorkDays": "220",
+      "daysPresent": "208",
+      "nccScout": "---",
+      "extracurricular": "---",
+      "conduct": "GOOD",
+      "dateOfApplication": "27/05/2024",
+      "dateOfIssue": "28/05/2024",
+      "reasonForLeaving": "PARENT REQUEST",
+      "remarks": "NILL"
+    };</script>
+  <script src="../../shared/fit-values.js"></script>
+  <script src="../../shared/page.js"></script>
+</body>
+
+</html>

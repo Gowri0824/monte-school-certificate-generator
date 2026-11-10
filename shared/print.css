@@ -1,0 +1,45 @@
+/* ================================================================
+   SHARED PRINT RULES  (used by every certificate)
+   @page   = tells the browser the paper size and margins when printing.
+   @media print = rules that apply ONLY when printing / saving as PDF.
+   Default paper is A4 portrait. A certificate whose original is a
+   different size (the Monté TC is Legal) sets its own named @page in its
+   own styles.css, and that file is loaded AFTER this one so it wins.
+================================================================ */
+@media print {
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+
+  /* A4 certificate */
+  .a4-page {
+    width: 210mm !important;
+    min-height: unset !important;
+    height: 297mm !important;
+    margin: 0 !important;
+    padding: 9mm 13mm 10mm 13mm !important;
+    box-shadow: none !important;
+    overflow: hidden !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+  }
+}
+
+/* Certificate pages in certificates/ : hide the toolbar, no margins, no grey background */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
+    background: #fff !important;
+  }
+
+  .cert-stage {
+    padding: 0 !important;
+  }
+}
